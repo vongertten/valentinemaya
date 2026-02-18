@@ -4,13 +4,13 @@
   let mailSent = false;
 
   // INITIERA EMAILJS – EN GÅNG
-  emailjs.init("citXus10TWCresSbC");
+  emailjs.init("email publik API");
 
   function sendEmail() {
     if (mailSent) return;
     mailSent = true;
 
-    emailjs.send("service_8ljtbfa", "template_4da1xgh", {
+    emailjs.send("service_key", "templat_kay", {
       yes: yesCount,
       no: noCount,
       device: /iPhone|iPad|iPod/i.test(navigator.userAgent) ? "iOS" : "Other"
@@ -36,3 +36,4 @@
   });
 
 })();
+
